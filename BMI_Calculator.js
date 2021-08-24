@@ -1,13 +1,13 @@
 
 
 //Find by pound and Inch.
-function findBMI(weight,height){
+function findBMI(pound,Inch){
     const w = 0.453592; //กำหนดตัวแปร w ขึ้นมาเป็นค่าคงที่ 1 ปอนด์ / kg
     const m = 0.0254; //กำหนดตัวแปร m ขึ้นมาเป็นค่าคงที่ 1 Inch / Meter
-    weight = weight*w; //แปลงค่า pound เป็น Inch
-    height = height*m; //แปลงค่า Inch. เป็น Meter
+    let weight = pound*w; //แปลงค่า pound เป็น Inch
+    let meter = Inch*m; //แปลงค่า Inch. เป็น Meter
     
-    let BMI = weight/(height**2); //สูตรคำนวณ BMI = น้ำหนัก / ส่วนสูง * ส่วนสูง
+    let BMI = weight/Math.pow((meter),2); //สูตรคำนวณ BMI = น้ำหนัก / ส่วนสูง * ส่วนสูง
 
     if(BMI < 18.5){ 
         return `Your BMI is : ${BMI}, Under Weight`;
@@ -20,3 +20,5 @@ function findBMI(weight,height){
 console.log(findBMI(36.5,39));//Georgia's
 console.log(findBMI(115.1,60));//Example 1
 console.log(findBMI(180,70));//Example 2
+
+//กรวิชญ์ 63130500001
