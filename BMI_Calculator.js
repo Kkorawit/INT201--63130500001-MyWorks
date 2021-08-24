@@ -1,8 +1,12 @@
-// 3 คะแนน ให้ใช้ let , const เขียนเป็น function ทำข้อมูลทดสอบ
-// อย่างน้อย 3 เคส
 
 
+//Find by pound and Inch.
 function findBMI(weight,height){
+    const w = 0.453592;
+    const m = 0.0254;
+    weight = weight*w;
+    height = height*m;
+    
     let BMI = weight/(height**2);
 
     if(BMI < 18.5){
@@ -13,6 +17,6 @@ function findBMI(weight,height){
     return `Your BMI is : ${BMI}, Over Weight`;
 }
 
-console.log(findBMI(16.55612,0.9906))//Georgia's
-console.log(findBMI(72.5,1.82));
-console.log(findBMI(100,1.5));
+console.log(findBMI(36.5,39))//Georgia's
+console.log(findBMI(115.1,60));
+console.log(findBMI(180,70));
